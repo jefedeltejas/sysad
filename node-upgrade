@@ -1,0 +1,13 @@
+inst nodejs
+
+node -v
+
+s npm cache clean -f
+
+s npm i -g n
+
+s n stable
+
+s ln -sf /usr/local/n/versions/node-v7.10.0/bin/node /usr/bin/node
+
+node -v
