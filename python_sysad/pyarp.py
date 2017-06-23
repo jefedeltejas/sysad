@@ -5,12 +5,10 @@ import subprocess
 #Command 1
 def arp_func():
 
-    arp = "arp"
+    routing_table = "arp"
     arp_arg = "-a"
-   # stdout = " >> "
-   # destination_file = "arpinfo.txt"
-    print "Gathering ARP info from router with %s command:\n" % arp
-    subprocess.call([arp, arp_arg])
+    print "Gathering ARP info from router with %s command:\n" % routing_table
+    subprocess.call([routing_table, arp_arg])
 
 #def cat_func():
 
