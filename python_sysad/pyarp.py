@@ -7,10 +7,10 @@ def arp_func():
 
     arp = "arp"
     arp_arg = "-a"
-    stdout = " >> "
-    destination_file = "arpinfo.txt"
+   # stdout = " >> "
+   # destination_file = "arpinfo.txt"
     print "Gathering ARP info from router with %s command:\n" % arp
-    subprocess.call([arp, arp_arg, stdout, destination_file])
+    subprocess.call([arp, arp_arg])
 
 #def cat_func():
 
@@ -23,6 +23,7 @@ def main():
     arp_func()
 #    cat_func()
 
-main()
+if __name__ == "__main__":
+    main()
 
  
