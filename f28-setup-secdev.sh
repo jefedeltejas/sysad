@@ -12,6 +12,9 @@
 #		dev tools for coding automated security tools for system and network admins using the 
 #		Fedora 28 workstation, as well as smoothing out basic usability over the base install.
 #		
+#		After running the script:
+#		- source .bashrc
+#		- usermod -a -G vboxusers "username"
 #	       
 #	       -	
 #	       -	
@@ -52,7 +55,8 @@ echo "Adding repositories..."
 sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm || exit 1
 
 echo "Updating Fedora..."
-upsec
+#upsec
+sudo dnf update -y; sudo dnf upgrade -y
 
 echo "Adding Security admin tools..."
 sudo dnf -y group install 'Security Lab'
